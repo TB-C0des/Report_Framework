@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Data Table with Filters</title>
+</head>
+<body>
+    <h1>Data Table with Filters</h1>
+    <div class="filter">
+        <input type="text" id="search" placeholder="Search..." >
+    </div>
+    
+    <form id="filterForm" class="filter-form">
+        <div class="filter-group">
+            <label for="column">Column:</label>
+            <select id="column" name="column">
+                <option value="">Select Column</option>
+                <option value="id">ID (Integer)</option>
+                <option value="name">Name (String)</option>
+                <option value="role">Role (Enum)</option>
+                <option value="hireDate">Hire Date (Date)</option>
+                <option value="isActive">Active (Boolean)</option>
+            </select>
+        </div>
+
+        <div class="filter-group" id="filterOptions">
+            <!-- Filter options will be injected here -->
+        </div>
+
+        <button type="button" onclick="applyFilter()">Apply Filter</button>
+    </form>
+
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th data-type="integer">ID 
+                    <!-- make a sort  -->
+                    <span class="sort" id="idInc" data-sort="id">▲</span>
+                    <span class="sort" id="idDec" data-sort="id">▼</span>
+
+                </th>
+                <th data-type="string">Name</th>
+                <th data-type="enum">Role</th>
+                <th data-type="date">Hire Date</th>
+                <th data-type="boolean">Active</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data rows will be injected here -->
+        </tbody>
+    </table>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

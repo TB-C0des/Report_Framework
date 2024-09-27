@@ -1,0 +1,46 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 20px;
+}
+#searchBar {
+	margin-bottom: 10px;
+	padding: 5px;
+	width: 100%;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+th {
+	cursor: pointer;
+}
+th input,
+th select {
+	width: 100%;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+th {
+	background-color: #f4f4f4;
+}
+.filter {
+	margin-bottom: 10px;
+}
+.filter select,
+.filter input {
+	margin-right: 5px;
+}
